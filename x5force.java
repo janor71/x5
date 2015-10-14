@@ -27,7 +27,7 @@ void setup() {
   middle= west + (east-west) / 2;
   //
   reset();
-  news=help + "\n     (+ or - changes brown ball speed.)";
+  news=help + "\n     (+ or - changes blu ball speed.)";
  }
  void reset() {
    // crystal ball at rest.
@@ -86,10 +86,10 @@ void bounce() {
   crystalY += crystalDY;  if ( crystalY<north || crystalY>south ) crystalDY *=  -1;
 }
 void collisions() {
-  float east,west;
+  float tmp,west;
   // Swap velocities!
   if ( dist( bamX,bamY, debX,debY ) < 30 ) {
-    east=debDX;  debDX=bamDX;  bamDX=east;
+    tmp=debDX;  debDX=bamDX;  bamDX=tmp;
     west=debDY;  debDY=bamDY;  bamDY=west;
   }
 //  WARNING:  DO NOT COPY ANY OF THIS CODE!
@@ -164,5 +164,4 @@ void mousePressed() {
   crystalDX=  (crystalX-mouseX) / 28.9;
   crystalDY=  (crystalY-mouseY) / 31.2;
 }
-
 
