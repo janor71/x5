@@ -105,7 +105,7 @@ void collisions() {
     float debY=adamDY;  adamDY=debDY;  debDY=debY;
   }
   // crystal ball hits R,Y,B.
-  float tmp,north,south,bamX=0;
+  float north,south,bamX=0;
   if ( dist( crystalX,crystalY, bamX,bamY ) < 30 ) {
     north=bamDX;  bamDX=crystalDX;  crystalDX=north;
     south=bamDY;  bamDY=crystalDY;  crystalDY=south;
